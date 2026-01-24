@@ -1,0 +1,21 @@
+#git and github
+```
+git init
+git branch -M main
+git add .
+git commit -m " pushing a new commit"
+git remote add origin -----\\\\\
+git push origin main
+
+
+read ssh
+how to setup ssh in your github
+
+
+# to make your project ready to go to the production you need 
+
+what makes the react app fast?
+
+# npm
+```
+    npm init 
