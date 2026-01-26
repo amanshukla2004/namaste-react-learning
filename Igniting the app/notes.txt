@@ -1,21 +1,129 @@
-#git and github
 ```
-git init
-git branch -M main
-git add .
-git commit -m " pushing a new commit"
-git remote add origin -----\\\\\
-git push origin main
+igniting the using parcel
+cd "Igniting the app"
+
+npx parcel index.html  (index.html --> source file)
+
+.......................................
+npm --> used to install a package
+npx -->  used to execute a package
+
+...........................................
+another way to get react to our app is to use npm
+
+cdn links are not the prefered way to use react why?
+    fetehing from a cdn is a costly operation
+    if i have a react module inside my app that will be so easy
+     
+     ``` 
+     npm install react --> there is no -D , we need react as a normal dependency
+     "dependencies": {
+            "react": "^19.2.3"
+        } --> is added to package.json
 
 
-read ssh
-how to setup ssh in your github
+    npm install react-dom
+    "dependencies": {
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
+  }
+
+  now we no longer need the cdn - remove them
+
+  now if you use React in your app error will be shown
+
+  that's why we use :-
+        import React from "react";
+        import ReactDOM from "react";
+    now we are using react from the node_modules that why we import them
+!@#
+
+there will be a error:- 🚨 @parcel/transformer-js: Browser scripts cannot have imports or exports.
+this error came because:
+    ??
+soln:
+    Add the type="module" attribute to the <script> tag in your html 
+    <script type="module" src="App.js"></script>
 
 
-# to make your project ready to go to the production you need 
 
-what makes the react app fast?
 
-# npm
-```
-    npm init 
+another error:
+import React from "react";
+import ReactDOM from "react";
+
+
+const headingElement = React.createElement(
+  "h1",
+  { id: "heading" },
+  "Hello, React!",
+);
+
+console.log(headingElement);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(headingElement);
+
+TypeError: (0 , _reactDefault.default).createRoot is not a function
+
+
+soln:
+        import React from "react";
+        mport ReactDOM from "react-dom/client";
+................................................
+read shortcuts for vs terminal
+
+
+...................................................
+# what parcel is doing for you
+- dev bulid
+- local server
+- HMR -> hot module replacement:
+    how its doing that:
+        parcel uses a File Watching Algorithm - written in c++
+- by using caching - faster builds 
+    where is cache stored:
+        .parcel-cache in your project folder
+- Image Optimisation
+- if u create a production build :
+    Minification of our files
+    compress your file
+- bundling
+- Consistent Hashing --> read
+- Code splitting
+- Differential Bundling - support older Browser --> read
+- Diagnoistic
+- Error Handling
+- it gives you a way to hoist in HTTPS
+- Tree shaking Algorithm - remove unused code 
+- different bundle for development and production
+
+parcel.org --> read the docs
+this will help you in system desing interview 
+
+
+
+
+..........................................................
+
+# make a production build
+
+``` 
+        npx parcel build index.html 
+        when you run this you will get an error 
+        because in package.json 
+        parcel conflicts with main : "App.js" but we give
+        the entry point as index.html so just remove the 
+        main : "App.js" from the package.json
+
+.............................................................................
+
+
+
+
+
+
+
+
+
+

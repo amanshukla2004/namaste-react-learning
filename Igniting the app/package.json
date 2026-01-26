@@ -1,0 +1,28 @@
+{
+  "name": "igniting-the-app",
+  "version": "1.0.0",
+  "description": "intalling npm and its dependencies",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amanshukla2004/namaste-react-learning.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Aman Shukla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amanshukla2004/namaste-react-learning/issues"
+  },
+  "homepage": "https://github.com/amanshukla2004/namaste-react-learning#readme",
+  "devDependencies": {
+    "parcel": "^2.16.3"
+  },
+  "dependencies": {
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
+  }
+}
