@@ -117,10 +117,20 @@ this will help you in system desing interview
         main : "App.js" from the package.json
 
 .............................................................................
+# making the project compatible for older versions 
+
+our node_modules contains - browserslist
+ 
+"browserslist": [
+    "last 1 Chrome version",
+    "last 1 Firefox version"
+] --> how to you know ki kon-kon se Browsers likhne hai 
+
+  for this - https://browserslist.dev/ 
+  https://github.com/browserslist/browserslist#query-composition
 
 
-
-
+// -----------------------------------------------------------
 
 
 

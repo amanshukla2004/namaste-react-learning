@@ -1,0 +1,16 @@
+{
+  "name": "episode-4",
+  "version": "1.0.0",
+  
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "author": "Aman Shukla",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "parcel": "^2.16.3"
+  }
+}
