@@ -17,8 +17,8 @@ const RestaurantCard = ({resObj}) => {
       />
       <h3> {resName}</h3>
       <h4> {cuisine}</h4>
-      <h4> {rating}</h4>
-      <h4>  {duration}</h4>
+      <h4> {rating} stars</h4>
+      <h4>  duration : {duration}</h4>
     </div>
   );};
 
