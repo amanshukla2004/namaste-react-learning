@@ -3,12 +3,14 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
+import Body2fromAi from "./components/Body2fromAi"
 
 const AppLayout = () => {
   return (
     <div className="app">
       <Header />
-      <Body />
+      {/* <Body /> */}
+      <Body2fromAi />
     </div>
   );
 };
