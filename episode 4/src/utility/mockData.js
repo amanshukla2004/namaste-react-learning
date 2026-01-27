@@ -1,0 +1,192 @@
+const restaurantList = [
+  {
+    id: 1,
+    imgsrc:
+      "https://images.unsplash.com/photo-1600628422019-9c3d8f51c1b5?w=800",
+    resName: "Paradise Biryani House",
+    cuisine: "Biryani, Mughlai",
+    rating: "4.3 stars",
+    duration: "35 min",
+  },
+  {
+    id: 2,
+    imgsrc:
+      "https://images.unsplash.com/photo-1626776876729-bab4368c48b5?w=800",
+    resName: "Bawarchi",
+    cuisine: "Biryani, North Indian",
+    rating: "4.2 stars",
+    duration: "30 min",
+  },
+  {
+    id: 3,
+    imgsrc:
+      "https://images.unsplash.com/photo-1599043513900-ed6fe01d3833?w=800",
+    resName: "Behrouz Biryani",
+    cuisine: "Biryani, Persian",
+    rating: "4.5 stars",
+    duration: "40 min",
+  },
+  {
+    id: 4,
+    imgsrc:
+      "https://images.unsplash.com/photo-1631515242808-497c3fbd3972?w=800",
+    resName: "Shah Ghouse",
+    cuisine: "Hyderabadi, Biryani",
+    rating: "4.4 stars",
+    duration: "45 min",
+  },
+  {
+    id: 5,
+    imgsrc:
+      "https://images.unsplash.com/photo-1604908554027-57a3c7d8c8bb?w=800",
+    resName: "Pista House",
+    cuisine: "Biryani, Bakery",
+    rating: "4.1 stars",
+    duration: "35 min",
+  },
+  {
+    id: 6,
+    imgsrc:
+      "https://images.unsplash.com/photo-1625944525572-0c8f1c78f9a6?w=800",
+    resName: "Kritunga Restaurant",
+    cuisine: "Andhra, Spicy",
+    rating: "4.3 stars",
+    duration: "40 min",
+  },
+  {
+    id: 7,
+    imgsrc:
+      "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?w=800",
+    resName: "Biryani Blues",
+    cuisine: "Biryani, Kebab",
+    rating: "4.0 stars",
+    duration: "30 min",
+  },
+  {
+    id: 8,
+    imgsrc:
+      "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=800",
+    resName: "Karim’s",
+    cuisine: "Mughlai, North Indian",
+    rating: "4.3 stars",
+    duration: "45 min",
+  },
+  {
+    id: 9,
+    imgsrc:
+      "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=800",
+    resName: "Al Jawahar",
+    cuisine: "Mughlai, Biryani",
+    rating: "4.4 stars",
+    duration: "50 min",
+  },
+  {
+    id: 10,
+    imgsrc:
+      "https://images.unsplash.com/photo-1628294895950-9805252327bc?w=800",
+    resName: "The Spicy Venue",
+    cuisine: "North Indian, Chinese",
+    rating: "4.2 stars",
+    duration: "25 min",
+  },
+  {
+    id: 11,
+    imgsrc:
+      "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=800",
+    resName: "Al Jawahar",
+    cuisine: "Mughlai, Biryani",
+    rating: "4.4 stars",
+    duration: "50 min",
+  },
+  {
+    id: 12,
+    imgsrc: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800",
+    resName: "Biryani Blues",
+    cuisine: "Biryani, Kebab",
+    rating: "4.0 stars",
+    duration: "30 min",
+  },
+  {
+    id: 13,
+    imgsrc:
+      "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=800",
+    resName: "Pista House",
+    cuisine: "Biryani, Bakery",
+    rating: "4.1 stars",
+    duration: "35 min",
+  },
+  {
+    id: 14,
+    imgsrc:
+      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800",
+    resName: "Shah Ghouse",
+    cuisine: "Hyderabadi, Biryani",
+    rating: "4.4 stars",
+    duration: "45 min",
+  },
+  {
+    id: 15,
+    imgsrc:
+      "https://images.unsplash.com/photo-1598514982205-fdbb6f21f6c0?w=800",
+    resName: "Behrouz Biryani",
+    cuisine: "Biryani, Persian",
+    rating: "4.5 stars",
+    duration: "40 min",
+  },
+  {
+    id: 16,
+    imgsrc:
+      "https://images.unsplash.com/photo-1625944230945-dfdc9e2dfc7b?w=800",
+    resName: "Paradise Biryani",
+    cuisine: "Biryani, Mughlai",
+    rating: "4.3 stars",
+    duration: "35 min",
+  },
+  {
+    id: 17,
+    imgsrc:
+      "https://images.unsplash.com/photo-1628294895950-9805252327bc?w=800",
+    resName: "The Spicy Venue",
+    cuisine: "North Indian, Chinese",
+    rating: "4.2 stars",
+    duration: "25 min",
+  },
+  {
+    id: 18,
+    imgsrc:
+      "https://images.unsplash.com/photo-1605478372223-49c39f2d7f8a?w=800",
+    resName: "Bawarchi",
+    cuisine: "Biryani, North Indian",
+    rating: "4.2 stars",
+    duration: "30 min",
+  },
+  {
+    id: 19,
+    imgsrc:
+      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800",
+    resName: "Kritunga",
+    cuisine: "Andhra, Spicy",
+    rating: "4.3 stars",
+    duration: "40 min",
+  },
+  {
+    id: 20,
+    imgsrc:
+      "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=800",
+    resName: "Moti Mahal Delux",
+    cuisine: "North Indian, Mughlai",
+    rating: "4.1 stars",
+    duration: "45 min",
+  },
+  {
+    id: 21,
+    imgsrc:
+      "https://images.unsplash.com/photo-1606755962773-d324e9a13086?w=800",
+    resName: "Punjabi Angithi",
+    cuisine: "Punjabi, North Indian",
+    rating: "4.0 stars",
+    duration: "30 min",
+  },
+];
+
+export default restaurantList;
