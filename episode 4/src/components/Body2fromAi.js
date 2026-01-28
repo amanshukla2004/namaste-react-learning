@@ -4,6 +4,9 @@ import Shimmer from "./Shimmer";
 const Body = () => {
   const [listOfRestraurant, setListOfRestraurant] = useState([]);
 
+  // for search box
+  const [searchText, setSearchText] = useState("");
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -26,11 +29,12 @@ const Body = () => {
       // 3. Extract the array of 20 restaurants
       const restaurants =
         restaurantCard?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-      setTimeout(() => {
-        setListOfRestraurant(restaurants);
-      }, 1000);
-      // later remove this settimeout and 
+      //   setTimeout(() => {
+      //   setListOfRestraurant(restaurants);
+      // }, 1000);
+      // later remove this settimeout and
       // just put setListOfRestraurant(restaurants);
+      setListOfRestraurant(restaurants);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -44,6 +48,46 @@ const Body = () => {
   // like return  (listOfRestraurant.length === 0) ? <Shimmer /> : (<div...></>);
   return (
     <div className="body">
+      <div className="FILTER">
+        <div className="search">
+          <input
+            type="text"
+            className="search-box"
+            value={searchText}
+            onChange={(e) => {
+              setSearchText(e.target.value);
+            }}
+          />
+          <button
+            onClick={() => {
+              // filter the restraurrant cards and update the ui
+              // search text
+              const filteredres = listOfRestraurant.filter(
+                (res) => res.info.name.toLowerCase().includes(searchText.toLowerCase())
+              );
+              setListOfRestraurant(filteredres);
+            }}
+          >
+            Search
+          </button>
+        </div>
+
+        <button
+          className="filter-btn"
+          onClick={() => {
+            // need to write a filter logic over here
+            const filteredList = listOfRestraurant.filter(
+              (res) => res.info.avgRating > 4.4,
+            );
+
+            setListOfRestraurant(filteredList);
+            console.log(listOfRestraurant); // data is filtered but the ui is mot updated
+            console.log(listOfRestraurant.length);
+          }}
+        >
+          Top Rated Restaurants
+        </button>
+      </div>
       <div className="res-container">
         {listOfRestraurant?.map((restr) => (
           /* key must be the unique ID from the API */

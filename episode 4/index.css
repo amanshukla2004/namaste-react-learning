@@ -149,3 +149,52 @@
 .login:hover::before {
   left: 100%;
 }
+
+
+/* FILTER area */
+.FILTER {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  border: 1px solid #ffffff;
+  background-color: rgb(255, 179, 0) ;
+  border-radius: 50;
+}
+
+.FILTER button {
+  padding: 12px 26px;
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 10px;
+
+  color: #ffffff;
+  background: linear-gradient(135deg, #ff7a18, #ff3d00);
+
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+
+  box-shadow: 0 8px 20px rgba(255, 61, 0, 0.35);
+
+  transition: 
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.3s ease;
+}
+
+/* Hover effect */
+.FILTER button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(255, 61, 0, 0.45);
+}
+
+/* Click effect */
+.FILTER button:active {
+  transform: scale(0.9);
+}
+
+/* Optional focus state */
+.FILTER button:focus {
+  outline: none;
+}
