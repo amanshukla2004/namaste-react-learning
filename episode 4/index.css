@@ -198,3 +198,148 @@
 .FILTER button:focus {
   outline: none;
 }
+
+
+/* /user- card */
+.user-card {
+  width: 320px;
+  padding: 22px 24px;
+  border-radius: 18px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.18),
+    rgba(255, 255, 255, 0.08)
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+
+  font-family: "Poppins", sans-serif;
+  color: #1f2937;
+
+  transition: all 0.35s ease;
+}
+
+/* Hover effect */
+.user-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+/* Name */
+.user-card h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+/* Location */
+.user-card h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+/* Contact */
+.user-card h4 {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #6b7280;
+}
+
+/* Optional icon-like spacing */
+.user-card h2::before {
+  content: "👤 ";
+}
+
+.user-card h3::before {
+  content: "📍 ";
+}
+
+.user-card h4::before {
+  content: "📞 ";
+}
+
+.flashy {
+  position: relative;
+  width: 340px;
+  padding: 24px;
+  border-radius: 18px;
+  background: #0b0f1a;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Animated Gradient Border */
+.flashy::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(
+    45deg,
+    #00f5ff,
+    #7cff00,
+    #ff00d4,
+    #ff9900,
+    #00f5ff
+  );
+  background-size: 400% 400%;
+  animation: borderMove 6s linear infinite;
+  border-radius: 20px;
+  z-index: -1;
+}
+
+/* Inner card */
+.flashy::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #0b0f1a;
+  border-radius: 16px;
+  z-index: -1;
+}
+
+/* Glow effect */
+.flashy:hover::before {
+  filter: blur(6px);
+}
+
+/* Text styling */
+.flashy h2 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #e5e7eb;
+}
+
+.flashy h3 {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+  color: #9ca3af;
+}
+
+.flashy h4 {
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+/* Emoji flair */
+.flashy h2::before { content: "👤 "; }
+.flashy h3::before { content: "📍 "; }
+.flashy h4::before { content: "📞 "; }
+
+/* Animation */
+@keyframes borderMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+

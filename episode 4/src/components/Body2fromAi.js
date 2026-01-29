@@ -2,6 +2,7 @@ import RestaurantCard2 from "./RestaurantCard2";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utility/useOnlineStatus";
 const Body = () => {
   const [listOfRestraurant, setListOfRestraurant] = useState([]);
   const [filteredRes, setFilteredRes] = useState([]);
@@ -45,6 +46,14 @@ const Body = () => {
       );
     }
   };
+
+  const onlineStatus = useOnlineStatus();
+  if (onlineStatus === false) {
+    return (
+      <h1> Looks like you are offline , pls check your internet connection</h1>
+    );
+  }
+
   // this is known as condition rendering
   if (listOfRestraurant.length === 0) {
     //return <h1>Loading ....</h1>
