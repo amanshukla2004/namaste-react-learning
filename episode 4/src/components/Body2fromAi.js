@@ -1,8 +1,10 @@
 import RestaurantCard2 from "./RestaurantCard2";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 const Body = () => {
   const [listOfRestraurant, setListOfRestraurant] = useState([]);
+  const [filteredRes, setFilteredRes] = useState([]);
 
   // for search box
   const [searchText, setSearchText] = useState("");
@@ -35,8 +37,12 @@ const Body = () => {
       // later remove this settimeout and
       // just put setListOfRestraurant(restaurants);
       setListOfRestraurant(restaurants);
+      setFilteredRes(restaurants);
     } catch (error) {
-      console.error("Error fetching data:", error);
+      console.error(
+        "API link mei kuch toh ho gaya hai  Error fetching data:",
+        error,
+      );
     }
   };
   // this is known as condition rendering
@@ -62,10 +68,10 @@ const Body = () => {
             onClick={() => {
               // filter the restraurrant cards and update the ui
               // search text
-              const filteredres = listOfRestraurant.filter(
-                (res) => res.info.name.toLowerCase().includes(searchText.toLowerCase())
+              const filteredres = listOfRestraurant.filter((res) =>
+                res.info.name.toLowerCase().includes(searchText.toLowerCase()),
               );
-              setListOfRestraurant(filteredres);
+              setFilteredRes(filteredres);
             }}
           >
             Search
@@ -80,7 +86,9 @@ const Body = () => {
               (res) => res.info.avgRating > 4.4,
             );
 
-            setListOfRestraurant(filteredList);
+            setFilteredRes((prev) =>
+              prev.length !== filteredList ? listOfRestraurant : filteredList,
+            );
             console.log(listOfRestraurant); // data is filtered but the ui is mot updated
             console.log(listOfRestraurant.length);
           }}
@@ -89,9 +97,11 @@ const Body = () => {
         </button>
       </div>
       <div className="res-container">
-        {listOfRestraurant?.map((restr) => (
+        {filteredRes?.map((restr) => (
           /* key must be the unique ID from the API */
-          <RestaurantCard2 key={restr.info.id} resObj={restr} />
+          <Link key={restr.info.id} to={"/restaurants/" + restr.info.id}>
+            <RestaurantCard2 resObj={restr} />
+          </Link>
         ))}
       </div>
     </div>
