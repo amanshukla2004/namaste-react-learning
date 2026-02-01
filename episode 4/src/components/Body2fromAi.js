@@ -64,7 +64,7 @@ const Body = () => {
   return (
     <div className="body">
       <div className="FILTER">
-        <div className="search">
+        <div className="search ">
           <input
             type="text"
             className="search-box"
