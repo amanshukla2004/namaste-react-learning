@@ -1,6 +1,6 @@
-import RestaurantCard2 from "./RestaurantCard2";
+import RestaurantCard2 from "../episode 4/src/components/RestaurantCard2";
 import { useState, useEffect } from "react";
-import Shimmer from "./Shimmer";
+import Shimmer from "../episode 4/src/components/Shimmer";
 
 const Body3 = () => {
   // ❌ normal variable does NOT work for UI data

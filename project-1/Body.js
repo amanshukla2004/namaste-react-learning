@@ -1,5 +1,5 @@
 import RestaurantCard from "./RestaurantCard";
-import restaurantList from "../utility/mockData";
+import restaurantList from "../episode 4/src/utility/mockData";
 
 import { useState, useEffect } from "react";
 
